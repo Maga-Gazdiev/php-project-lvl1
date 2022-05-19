@@ -1,0 +1,19 @@
+{
+    "name": "moker/project",
+    "bin": [
+        "bin/brain-games"
+      ],
+      "authors":[
+        {
+                "name": "mangustr"
+        }
+],
+    "autoload": {
+        "psr-4": {
+            "Moker\\Project\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "descriptioc": "hexlet php-package",   
+    "require": {}
+}
