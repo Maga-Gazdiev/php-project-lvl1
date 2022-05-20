@@ -1,7 +1,9 @@
 {
     "name": "moker/project",
     "bin": [
-        "bin/brain-games"
+        "bin/brain-games",
+        "bin/brain-even",
+        "bin/brain-calc"
       ],
       "authors":[
         {
@@ -11,9 +13,17 @@
     "autoload": {
         "psr-4": {
             "Moker\\Project\\": "src/"
-        }
+        },
+        "files":
+        [
+            "src/Cli.php",
+            "src/fifthStep.php",
+            "src/sixthStep.php"
+        ]
     },
     "license": "MIT",
     "descriptioc": "hexlet php-package",   
-    "require": {}
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.13"
+    }
 }
