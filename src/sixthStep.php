@@ -68,7 +68,7 @@ function  sixthStep(): void
     line($inAnswer);
     $win[] = $inAnswer[$i];
     if (count($win) === 3) {
-      line("Congratulation, $name");
+      line("Congratulation, $name!");
     }
   }
 }

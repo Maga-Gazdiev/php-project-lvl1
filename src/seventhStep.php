@@ -32,7 +32,7 @@ function seventhStep()
     if ($norm === "correct") {
       $win[] = $norm[$i];
       if (count($win) === 3) {
-        line("Congratulation, $name");
+        line("Congratulation, $name!");
       }
     }
   }

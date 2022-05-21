@@ -30,7 +30,7 @@ for ($i = 0; $i < 3; $i++) {
     if ($last === "correct") {
 		$win[] = $last[$i];
 		if (count($win) === 3) {
-		  line("Congratulation, $name");
+		  line("Congratulation, $name!");
 		}
 	  }
  }
