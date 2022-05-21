@@ -50,7 +50,7 @@ function getQuestion($a, $b, $c)
 
 function  sixthStep(): void
 {
-  line("Welcome to the Brain Game!");
+  line("Welcome to the Brain Games!");
   $name = (prompt('May I Have your name?'));
   line("Hello, {$name}!");
   line('What is the result of the expression?');

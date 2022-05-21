@@ -14,7 +14,7 @@ function onParity(int $number1, string $answer1)
 	}
 }
 function nine(){
-line("Welcome to the Brain Game!");
+line("Welcome to the Brain Games!");
 $name =  prompt('May I Have your name?');
 line("Hello, {$name}!");
 line('Answer "yes" if the number is prime, otherwise answer "no"');

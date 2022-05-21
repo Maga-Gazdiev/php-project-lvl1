@@ -15,7 +15,7 @@ function onPari($a, $b)
 }
 function seventhStep()
 {
-  line("Welcome to the Brain Game!");
+  line("Welcome to the Brain Games!");
   $name = prompt('May I Have your name?');
   line("Hello, {$name}!");
   line('Find the greatest common divisor of given numbers.');
