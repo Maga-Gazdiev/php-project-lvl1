@@ -3,7 +3,8 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd"
       ],
       "authors":[
         {
@@ -18,7 +19,8 @@
         [
             "src/Cli.php",
             "src/fifthStep.php",
-            "src/sixthStep.php"
+            "src/sixthStep.php",
+            "src/seventhStep.php"
         ]
     },
     "license": "MIT",
