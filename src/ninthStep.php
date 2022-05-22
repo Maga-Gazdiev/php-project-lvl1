@@ -5,14 +5,27 @@ namespace ninth\step;
 use function cli\line;
 use function cli\prompt;
 
-function onParity(int $number1, string $answer1)
+function primeCheck($number){
+    if ($number === 1){
+    return 0;
+    } 
+    for ($i = 2; $i <= sqrt($number); $i++){
+        if ($number % $i == 0)
+            return 0;
+    }
+    return 1;
+}
+ 
+function onParity(int $number1, string $answer1, $name)
 {
-	if ($number1 === 2 && $answer1 === 'yes' || $number1 !== 2 && $answer1 === 'no') {
+  $flag = primeCheck($number1);
+	if ($flag === 1 && $answer1 === 'yes' || $flag !== 1 && $answer1 === 'no') {
 		echo('correct');
-	} elseif ($number1 !== 2 && $answer1 === 'yes' || $number1 === 2 && $answer1 === 'no') {
-		die('uncorrect');
+	} elseif ($flag !== 1 && $answer1 === 'yes' || $flag === 1 && $answer1 === 'no') {
+		die("Let's try again, $name!");
 	}
 }
+
 function nine(){
 line("Welcome to the Brain Games!");
 $name =  prompt('May I Have your name?');
@@ -20,12 +33,12 @@ line("Hello, {$name}!");
 line('Answer "yes" if the number is prime, otherwise answer "no"');
 for ($i = 0; $i < 3; $i++) {
 	$randNum = rand(2, 1000);
-	$inAnswer = gmp_prob_prime($randNum);
+	$inAnswer = primeCheck($randNum);
 	$question = [];
 	$question = ("Question: $randNum");
 	line($question);
     $answer = prompt("Your answer");
-	$last = onParity($inAnswer, $answer);
+	$last = onParity($inAnswer, $answer, $name);
 	line($last);
     if ($last === "correct") {
 		$win[] = $last[$i];
