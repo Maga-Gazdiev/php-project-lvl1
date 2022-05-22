@@ -42,11 +42,9 @@ function nine()
 		$answer = prompt("Your answer");
 		$last = onParity($inAnswer, $answer, $name);
 		line($last);
-		if ($last === "correct") {
 			$win[] = $last[$i];
 			if (count($win) === 3) {
 				line("Congratulations, $name!");
-			}
 		}
 	}
 }
