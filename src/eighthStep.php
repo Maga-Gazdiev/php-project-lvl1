@@ -5,12 +5,12 @@ namespace eighth\step;
 use function cli\line;
 use function cli\prompt;
 
-function onPari($a, $b)
+function onPari($a, $b, $name)
 {
 	if ($a === $b) {
 		return ("correct");
 	} elseif ($a !== $b) {
-		die("'$b' is wrong answer :( Correct answer was '$a'.\nLet's try again");
+		die("'$b' is wrong answer :( Correct answer was '$a'.\nLet's try again, $name!");
 	}
 }
 
@@ -36,7 +36,7 @@ for ($i = 0; $i < 3; $i++) {
 	$question = ("Question: $inQuestion");
 	line($question);
 	$answer = prompt("Your answer");
-	$last = onPari($inAnswer, $answer);
+	$last = onPari($inAnswer, $answer, $name);
 	line($last);
 	$win[] = $last[$i];
 	if (count($win) === 3) {
