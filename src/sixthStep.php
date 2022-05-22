@@ -5,13 +5,13 @@ namespace step\sixth;
 use function cli\line;
 use function cli\prompt;
 
-function getAnswer($a, $b, $c, $d)
+function getAnswer($a, $b, $c, $d, $name)
 {
   if ($b === 0) {
     $sum = $a - $c;
     if ($d != $sum) {
       die("'$d' is wrong answer :( Correct answer was 
-   '$sum'.\nLet's try again");
+   '$sum'.\nLet's try again, $name!");
     } elseif ($d = $sum) {
       return ("correct");
     }
@@ -20,7 +20,7 @@ function getAnswer($a, $b, $c, $d)
     $sum = $a + $c;
     if ($d != $sum) {
       die("'$d' is wrong answer :( Correct answer was 
-   '$sum'.\nLet's try again");
+   '$sum'.\nLet's try again, $name!");
     } elseif ($d = $sum) {
       return ("correct");
     }
@@ -29,7 +29,7 @@ function getAnswer($a, $b, $c, $d)
     $sum = $a * $c;
     if ($d != $sum) {
       die("'$d' is wrong answer :( Correct answer was 
-   '$sum'.\nLet's try again");
+   '$sum'.\nLet's try again, $name!");
     } elseif ($d = $sum) {
       return ("correct");
     }
@@ -64,7 +64,7 @@ function  sixthStep(): void
     $question = ("Question: $inQuestion");
     line($question);
     $answer = (prompt("Your answer"));
-    $inAnswer = getAnswer($randNum1, $randSigns, $randNum2, $answer);
+    $inAnswer = getAnswer($randNum1, $randSigns, $randNum2, $answer, $name);
     line($inAnswer);
     $win[] = $inAnswer[$i];
     if (count($win) === 3) {

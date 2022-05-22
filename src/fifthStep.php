@@ -29,7 +29,7 @@ function fifthStep()
           line($norm);
           $win[] = $norm[$i];
           if (count($win) === 3) {
-               echo("Congratulations, {$name}!");
+               line("Congratulations, {$name}!");
           }
      }
 }
