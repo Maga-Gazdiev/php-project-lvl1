@@ -10,7 +10,7 @@ function onParity(int $number1, string $answer)
      if (($number1 % 2) == 0 && $answer === 'yes' || ($number1 % 2) !== 0 && $answer === 'no') {
           return ('correct');
      } elseif (($number1 % 2) !== 0 && $answer === 'yes' || ($number1 % 2) == 0 && $answer === 'no') {
-          die('uncorrect');
+          die("Let's try again, Tirion!");
      }
 }
 function fifthStep()
