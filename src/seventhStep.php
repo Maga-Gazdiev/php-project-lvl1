@@ -13,6 +13,27 @@ function onPari($a, $b)
     die("'$b' is wrong answer :( Correct answer was '$a'.\nLet's try again");
   }
 }
+
+function gcd(int $a, int $b)
+{
+  $range = range(0, $a);
+  $range1 = range(0, $b);
+  for ($i = 1; $i <= count($range) - 1; $i++) {
+    $mn = ($a / $range[$i]);
+    if (is_int($mn)) {
+      $allDivi[] = $mn;
+    }
+  }
+  for ($i = 1; $i <= count($range1) - 1; $i++) {
+    $mm = ($b / $range1[$i]);
+    if (is_int($mm)) {
+      $allDivi1[] = $mm;
+    }
+  }
+  $commonDivisors = array_intersect($allDivi, $allDivi1);
+  return (max($commonDivisors));
+}
+
 function seventhStep()
 {
   line("Welcome to the Brain Games!");
@@ -26,7 +47,7 @@ function seventhStep()
     $question = ("Question: $num1 $num2");
     line($question);
     $answer = prompt("Your answer");
-    $mm = gmp_gcd($num1, $num2);
+    $mm = gcd($num1, $num2);
     $norm = onPari($mm, $answer);
     line("$norm");
     if ($norm === "correct") {
