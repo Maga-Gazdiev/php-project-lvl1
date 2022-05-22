@@ -40,7 +40,7 @@ for ($i = 0; $i < 3; $i++) {
 	line($last);
 	$win[] = $last[$i];
 	if (count($win) === 3) {
-		line("Congratulation, $name!");
+		line("Congratulations, $name!");
   }
  }
 }
