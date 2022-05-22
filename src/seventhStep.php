@@ -5,12 +5,12 @@ namespace seven\step;
 use function cli\line;
 use function cli\prompt;
 
-function onPari($a, $b)
+function onPari($a, $b, $name)
 {
   if ($a == $b) {
     return ("correct");
   } elseif ($a !== $b) {
-    die("'$b' is wrong answer :( Correct answer was '$a'.\nLet's try again");
+    die("'$b' is wrong answer :( Correct answer was '$a'.\nLet's try again, $name!");
   }
 }
 
@@ -48,7 +48,7 @@ function seventhStep()
     line($question);
     $answer = prompt("Your answer");
     $mm = gcd($num1, $num2);
-    $norm = onPari($mm, $answer);
+    $norm = onPari($mm, $answer, $name);
     line("$norm");
     if ($norm === "correct") {
       $win[] = $norm[$i];
