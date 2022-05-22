@@ -7,9 +7,9 @@ use function cli\prompt;
 
 function onParity(int $number1, string $answer, $name)
 {
-     if (($number1 % 2) == 0 && $answer === 'yes' || ($number1 % 2) !== 0 && $answer === 'no') {
+     if (($number1 % 2) === 0 && $answer === 'yes' || ($number1 % 2) !== 0 && $answer === 'no') {
           return ('correct');
-     } elseif (($number1 % 2) !== 0 && $answer === 'yes' || ($number1 % 2) == 0 && $answer === 'no') {
+     } elseif (($number1 % 2) !== 0 && $answer === 'yes' || ($number1 % 2) === 0 && $answer === 'no') {
           die("Let's try again, $name!");
      }
 }
