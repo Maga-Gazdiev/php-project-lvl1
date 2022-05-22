@@ -10,7 +10,7 @@ function onPari($a, $b, $name)
 	if ($a === $b) {
 		return ("correct");
 	} elseif ($a !== $b) {
-		die("'$a' is wrong answer :( Correct answer was '$b'.\nLet's try again, $name!");
+		die("'$b' is wrong answer :( Correct answer was '$a'.\nLet's try again, $name!");
 	}
 }
 
