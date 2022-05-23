@@ -17,4 +17,4 @@ validate:
 lint:
 		composer exec --verbose phpcs -- --standard=PSR12 src bin
 fix:
-		phpcbf /usr/bin/phpcbf
+		 phpcbf -p -s -v -n . --extensions=php
