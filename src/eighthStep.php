@@ -22,7 +22,7 @@ function eighth()
     line('What number is missing in the progression?');
     for ($i = 0; $i < 3; $i++) {
         $randNum = rand(4, 7);
-        $randNum2 = rand(4,  7);
+        $randNum2 = rand(4, 7);
         $Num = 99;
         $arithmetic = range($randNum, $Num, $randNum2);
         $str = implode(" ", $arithmetic);
