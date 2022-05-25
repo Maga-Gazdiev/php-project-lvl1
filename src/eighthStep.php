@@ -5,16 +5,16 @@ namespace eighth\step;
 use function cli\line;
 use function cli\prompt;
 
-function onPari($a, $b, $name)
+function onPari(string $a, string $b, string $name): string
 {
     if ($a === $b) {
-        return ("correct");
+        return("correct");
     } elseif ($a !== $b) {
         die("'$b' is wrong answer :( Correct answer was '$a'.\nLet's try again, $name!");
     }
 }
 
-function eighth()
+function eighth(): void
 {
     line("Welcome to the Brain Games!");
     $name = prompt('May I Have your name?');

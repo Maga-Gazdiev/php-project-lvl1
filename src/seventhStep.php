@@ -5,7 +5,7 @@ namespace seven\step;
 use function cli\line;
 use function cli\prompt;
 
-function onPari($a, $b, $name)
+function onPari(int $a, int $b, string $name)
 {
     if ($a == $b) {
         return ("correct");

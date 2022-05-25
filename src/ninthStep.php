@@ -5,7 +5,7 @@ namespace ninth\step;
 use function cli\line;
 use function cli\prompt;
 
-function primeCheck($number)
+function primeCheck(int $number): int
 {
     if ($number === 1) {
         return 0;
@@ -18,7 +18,7 @@ function primeCheck($number)
     return 1;
 }
 
-function onParity(int $number1, string $answer1, $name)
+function onParity(int $number1, string $answer1, string $name)
 {
     $flag = primeCheck($number1);
     if ($flag === 0 && $answer1 === 'yes' || $flag !== 0 && $answer1 === 'no') {
@@ -28,7 +28,7 @@ function onParity(int $number1, string $answer1, $name)
     }
 }
 
-function nine()
+function nine(): void
 {
     line("Welcome to the Brain Games!");
     $name =  prompt('May I Have your name?');

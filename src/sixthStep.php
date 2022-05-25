@@ -5,7 +5,7 @@ namespace step\sixth;
 use function cli\line;
 use function cli\prompt;
 
-function getAnswer($a, $b, $c, $d, $name)
+function getAnswer(int $a, int $b, int $c, int $d, string $name): string
 {
     if ($b === 0) {
         $sum = $a - $c;
@@ -42,7 +42,7 @@ function getAnswer($a, $b, $c, $d, $name)
     }
 }
 
-function getQuestion($a, $b, $c)
+function getQuestion(int $a, int $b, int $c): string
 {
     if ($b === 0) {
         return ("$a - $c");

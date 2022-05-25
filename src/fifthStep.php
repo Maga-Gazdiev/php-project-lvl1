@@ -5,7 +5,7 @@ namespace fifth\step;
 use function cli\line;
 use function cli\prompt;
 
-function onParity(int $number1, string $answer, $name)
+function onParity(int $number1, string $answer, string $name)
 {
     if (($number1 % 2) === 0 && $answer === 'yes' || ($number1 % 2) !== 0 && $answer === 'no') {
          return ('correct');
@@ -13,7 +13,7 @@ function onParity(int $number1, string $answer, $name)
          die("Let's try again, $name!");
     }
 }
-function fifthStep()
+function fifthStep(): void
 {
      line("Welcome to the Brain Games!");
      $name = prompt('May I Have your name?');
