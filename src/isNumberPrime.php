@@ -22,7 +22,7 @@ function onParity(int $number1, string $answer1, string $name)
 {
     $flag = primeCheck($number1);
     if ($flag === 0 && $answer1 === 'yes' || $flag !== 0 && $answer1 === 'no') {
-        echo ('correct');
+        return ('correct');
     } elseif ($flag !== 0 && $answer1 === 'yes' || $flag === 0 && $answer1 === 'no') {
         die("Let's try again, $name!");
     }

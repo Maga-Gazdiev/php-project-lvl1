@@ -19,11 +19,11 @@
         },
         "files": [
             "src/Cli.php",
-            "src/fifthStep.php",
-            "src/sixthStep.php",
-            "src/seventhStep.php",
-            "src/eighthStep.php",
-            "src/ninthStep.php"
+            "src/parityCheck.php",
+            "src/calculator.php",
+            "src/greatestCommonDivisor.php",
+            "src/numberInProgression.php",
+            "src/isNumberPrime.php"
         ]
     },
     "license": "MIT",

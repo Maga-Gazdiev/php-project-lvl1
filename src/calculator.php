@@ -5,39 +5,37 @@ namespace step\sixth;
 use function cli\line;
 use function cli\prompt;
 
-function getAnswer(int $a, int $b, int $c, int $d, string $name): string
+function getAnswer(int $a, int $b, int $c, string $d, string $name): string
 {
     if ($b === 0) {
         $sum = $a - $c;
         if ($d != $sum) {
             die(
-                "'$d' is wrong answer :( Correct answer was 
-   '$sum'.\nLet's try again, $name!"
+                "'$d' is wrong answer :( Correct answer was '$sum'.\nLet's try again, $name!"
             );
         } elseif ($d = $sum) {
-            return ("correct");
+            return("correct");
         }
     }
     if ($b === 1) {
         $sum = $a + $c;
         if ($d != $sum) {
             die(
-                "'$d' is wrong answer :( Correct answer was 
-   '$sum'.\nLet's try again, $name!"
+                "'$d' is wrong answer :( Correct answer was '$sum'.\nLet's try again, $name!"
             );
         } elseif ($d = $sum) {
-            return ("correct");
+            return("correct");
         }
     }
     if ($b === 2) {
         $sum = $a * $c;
         if ($d != $sum) {
             die(
-                "'$d' is wrong answer :( Correct answer was 
-   '$sum'.\nLet's try again, $name!"
+                "'$d' is wrong answer :( Correct answer was '$sum'.\nLet's try again, $name!"
             );
         } elseif ($d = $sum) {
-            return ("correct");
+            return("correct");
+           
         }
     }
 }

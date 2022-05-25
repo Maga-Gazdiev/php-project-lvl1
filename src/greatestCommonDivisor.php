@@ -5,7 +5,7 @@ namespace seven\step;
 use function cli\line;
 use function cli\prompt;
 
-function onPari(int $a, int $b, string $name)
+function onPari(string $a, string $b, string $name): string
 {
     if ($a == $b) {
         return ("correct");
@@ -14,7 +14,7 @@ function onPari(int $a, int $b, string $name)
     }
 }
 
-function gcd(int $a, int $b)
+function gcd(int $a, int $b): int
 {
     $range = range(0, $a);
     $range1 = range(0, $b);
@@ -34,7 +34,7 @@ function gcd(int $a, int $b)
     return (max($commonDivisors));
 }
 
-function seventhStep()
+function seventhStep(): void
 {
     line("Welcome to the Brain Games!");
     $name = prompt('May I Have your name?');
