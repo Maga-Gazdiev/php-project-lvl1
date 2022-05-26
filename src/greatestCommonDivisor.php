@@ -54,8 +54,8 @@ function seventhStep(): void
         $norm = onParity((int) $mm, (int)$answer, $name);
         line("$norm");
             $win[] = $norm[$i];
-            if (count($win) === 3) {
-                line("Congratulations, $name!");
-            }
+        if (count($win) === 3) {
+            line("Congratulations, $name!");
+        }
     }
 }
