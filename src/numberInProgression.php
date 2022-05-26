@@ -31,7 +31,7 @@ function eighth(): void
         $str = implode(" ", $arithmetic);
         $array = explode(" ", $str);
         $search = array_rand($array, 1);
-        $key = array_search($search, $array);
+        $key = array_search($search, $array, true);
         $randNum3 = rand(1, count($array));
         $replacement = array_splice($array, $randNum3, 1, "..");
         $inQuestion = implode(" ", $array);
