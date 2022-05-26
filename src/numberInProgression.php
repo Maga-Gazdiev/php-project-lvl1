@@ -22,6 +22,7 @@ function eighth(): void
     $name = prompt('May I Have your name?');
     line("Hello, {$name}!");
     line('What number is missing in the progression?');
+    $win = [];
     for ($i = 0; $i < 3; $i++) {
         $randNum = rand(4, 7);
         $randNum2 = rand(4, 7);

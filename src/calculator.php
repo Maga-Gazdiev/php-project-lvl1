@@ -22,6 +22,7 @@ function sixthStep(): void
     line("Hello, {$name}!");
     line('What is the result of the expression?');
     $signs = ['-', '+', '*'];
+    $win = [];
     for ($i = 0; $i < 3; $i++) {
         $randIndex = array_rand($signs, 1);
         $randOperation = $signs[$randIndex];

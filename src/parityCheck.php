@@ -21,6 +21,7 @@ function fifthStep(): void
      $name = prompt('May I Have your name?');
      line("Hello, {$name}!");
      line('Answer "yes" if the number is even, otherwise answer "no"');
+     $win = [];
     for ($i = 0; $i < 3; $i++) {
          $result = [];
          $number = rand(0, 100);

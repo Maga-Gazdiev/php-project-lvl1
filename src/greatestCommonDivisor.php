@@ -43,6 +43,7 @@ function seventhStep(): void
     $name = prompt('May I Have your name?');
     line("Hello, {$name}!");
     line('Find the greatest common divisor of given numbers.');
+    $win = [];
     for ($i = 0; $i < 3; $i++) {
         $num1 = rand(20, 30);
         $num2 = rand(20, 30);

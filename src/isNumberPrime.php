@@ -36,6 +36,7 @@ function nine(): void
     $name =  prompt('May I Have your name?');
     line("Hello, {$name}!");
     line('Answer "yes" if the number is prime, otherwise answer "no"');
+    $win = [];
     for ($i = 0; $i < 3; $i++) {
         $randNum = rand(2, 1000);
         $inAnswer = primeCheck($randNum);
