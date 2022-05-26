@@ -39,7 +39,7 @@ function sixthStep(): void
         line($question);
         $answer = (prompt("Your answer"));
         $inAnswer = onParity((int)$answer, $correctAnswer, $name);
-        line((string) $inAnswer);
+        line($inAnswer);
         $win[] = $inAnswer[$i];
         if (count($win) === 3) {
             line("Congratulations, $name!");
