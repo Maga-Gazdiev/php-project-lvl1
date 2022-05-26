@@ -5,19 +5,22 @@ namespace seven\step;
 use function cli\line;
 use function cli\prompt;
 
-function onPari(string $a, string $b, string $name): string
+function onParity(int $a, int $b, string $name): string
 {
+    $result = "";
     if ($a == $b) {
-        return ("correct");
+        $result = ('Correct!');
     } elseif ($a !== $b) {
         die("'$b' is wrong answer :( Correct answer was '$a'.\nLet's try again, $name!");
     }
+    return $result;
 }
-
-function gcd(int $a, int $b): int
+function gcd(int $a, int $b): int|bool
 {
     $range = range(0, $a);
     $range1 = range(0, $b);
+    $allDivi = [];
+    $allDivi1 = [];
     for ($i = 1; $i <= count($range) - 1; $i++) {
         $mn = ($a / $range[$i]);
         if (is_int($mn)) {
@@ -48,7 +51,7 @@ function seventhStep(): void
         line($question);
         $answer = prompt("Your answer");
         $mm = gcd($num1, $num2);
-        $norm = onPari($mm, $answer, $name);
+        $norm = onParity((int) $mm, (int)$answer, $name);
         line("$norm");
         if ($norm === "correct") {
             $win[] = $norm[$i];

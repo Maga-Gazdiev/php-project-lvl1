@@ -18,14 +18,16 @@ function primeCheck(int $number): int
     return 1;
 }
 
-function onParity(int $number1, string $answer1, string $name)
+function onParity(int $number1, string $answer1, string $name): string
 {
+    $result = '';
     $flag = primeCheck($number1);
     if ($flag === 0 && $answer1 === 'yes' || $flag !== 0 && $answer1 === 'no') {
-        return ('correct');
+        $result = ('correct');
     } elseif ($flag !== 0 && $answer1 === 'yes' || $flag === 0 && $answer1 === 'no') {
         die("Let's try again, $name!");
     }
+    return $result;
 }
 
 function nine(): void

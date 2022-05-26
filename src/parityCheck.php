@@ -5,13 +5,15 @@ namespace fifth\step;
 use function cli\line;
 use function cli\prompt;
 
-function onParity(int $number1, string $answer, string $name)
+function onParity(int $number1, string $answer, string $name): string
 {
+     $result = '';
     if (($number1 % 2) === 0 && $answer === 'yes' || ($number1 % 2) !== 0 && $answer === 'no') {
-         return ('correct');
+        $result = ('correct');
     } elseif (($number1 % 2) !== 0 && $answer === 'yes' || ($number1 % 2) === 0 && $answer === 'no') {
-         die("Let's try again, $name!");
+        die("Let's try again, $name!");
     }
+    return $result;
 }
 function fifthStep(): void
 {

@@ -5,13 +5,15 @@ namespace eighth\step;
 use function cli\line;
 use function cli\prompt;
 
-function onPari(string $a, string $b, string $name): string
+function onParity(string $a, string $b, string $name): string
 {
+    $result = '';
     if ($a === $b) {
-        return("correct");
+        $result = ("correct");
     } elseif ($a !== $b) {
         die("'$b' is wrong answer :( Correct answer was '$a'.\nLet's try again, $name!");
     }
+    return $result;
 }
 
 function eighth(): void
@@ -23,7 +25,7 @@ function eighth(): void
     for ($i = 0; $i < 3; $i++) {
         $randNum = rand(4, 7);
         $randNum2 = rand(4, 7);
-        $Num = 99;
+        $Num = 1000;
         $arithmetic = range($randNum, $Num, $randNum2);
         $str = implode(" ", $arithmetic);
         $array = explode(" ", $str);
@@ -37,7 +39,7 @@ function eighth(): void
         $question = ("Question: $inQuestion");
         line($question);
         $answer = prompt("Your answer");
-        $last = onPari($inAnswer, $answer, $name);
+        $last = onParity($inAnswer, $answer, $name);
         line($last);
         $win[] = $last[$i];
         if (count($win) === 3) {
