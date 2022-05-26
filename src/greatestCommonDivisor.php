@@ -53,11 +53,9 @@ function seventhStep(): void
         $mm = gcd($num1, $num2);
         $norm = onParity((int) $mm, (int)$answer, $name);
         line("$norm");
-        if ($norm === "correct") {
             $win[] = $norm[$i];
             if (count($win) === 3) {
                 line("Congratulations, $name!");
             }
-        }
     }
 }
